@@ -7,3 +7,4 @@ To see a list of all the variables included, please refer to the Codebook.
 The Id for each subject is also included, together with the activity label.
 
 -----
+
