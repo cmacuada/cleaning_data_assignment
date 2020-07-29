@@ -1,6 +1,7 @@
+#Coursera Assignment - Week 4
+
 #Libraries
 library(tidyverse)
-library(janitor)
 
 #Read All Text Files
 activity_labels <- read.table("UCI HAR Dataset/activity_labels.txt", col.names = c("activity", "activity_label"))
@@ -28,7 +29,7 @@ train_merge <- bind_cols(train_subject, train_lab, train) %>%
 #Combine Test and Train.. 
 #Select variables with MEAN and STD,
 data.1 <- bind_rows(test_merge, train_merge) %>% 
-      left_join(., activity_labels.2) %>% 
+      left_join(., activity_labels) %>% 
       select(subject_id, activity_label, contains("mean()"), contains("std()"))
 
 #Clean Names
